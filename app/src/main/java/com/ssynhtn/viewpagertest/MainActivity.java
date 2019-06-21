@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ssynhtn.wrapcontentviewpager.ViewPagerEdgeEffect;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager viewPager = findViewById(R.id.view_pager);
+        ViewPagerEdgeEffect.fixViewPager(this, viewPager);
         viewPager.setAdapter(new Adapter(getSupportFragmentManager(), 8));
         viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.page_margin));
 
